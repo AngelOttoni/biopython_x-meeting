@@ -1,5 +1,5 @@
-<h1 align="center"> <img src="resources/xmeeting_banner.jpg"/> </h1>      
-<h1 align="center"> Mini-course: Introduction to Biopython </h1>     
+<h1 align="center"> <img src="resources/logo_horizontal_xm26.jpeg"/> </h1>      
+<h1 align="center"> Biopython in Practice: Sequence Manipulation & Analysis </h1>     
 
 ![Badge Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)      
 
@@ -26,15 +26,20 @@ On our final day, we testedd new skills with a hands-on project. We worked on ch
 
 
 
-## Team
-       
-| [<img src="https://avatars.githubusercontent.com/u/16027642?v=4" width=115><br><sub>Natalia Coutouné</sub>](https://github.com/nat-coutoune) |    
-| :---: |
-| [<img src="https://avatars.githubusercontent.com/u/210911421?v=4" width=115><br><sub>Juliana Félix</sub>](https://github.com/felix-juliana) |    
-| :---: |
-| [<img src="https://avatars.githubusercontent.com/u/86311687?v=4" width=115><br><sub>Angelina Meiras-Ottoni</sub>](https://github.com/AngelOttoni) |  
-| :---: |
- 
+## Course Staff
 
+### Instructors
 
+---
 
+| [<img src="https://avatars.githubusercontent.com/u/86311687?v=4" width=115><br><sub>Angelina de Meiras Ottoni</sub>](https://github.com/AngelOttoni) | [<img src="https://avatars.githubusercontent.com/u/104275929?v=4" width=115><br><sub>Gabriela Fink da Silva</sub>](https://github.com/Gabifinks) | [<img src="https://avatars.githubusercontent.com/u/57995417?v=4" width=115><br><sub>Luciana Souto Mofatto</sub>](https://github.com/luttism) |
+| :---: | :---: | :---: |
+
+---
+
+### Teaching Assistants
+
+---
+
+| [<img src="https://avatars.githubusercontent.com/u/241649938?v=4" width=115><br><sub>Lara Cunha Mello Martins</sub>](https://github.com/lara-cmm) | [<img src="https://avatars.githubusercontent.com/u/41396273?v=4" width=115><br><sub>Larisse Silva Depa</sub>](https://github.com/LarisseDepa) | [<img src="https://avatars.githubusercontent.com/u/41396490?v=4" width=115><br><sub>Larissa Silva Depa</sub>](https://github.com/LarissaDepa) | [<img src="https://avatars.githubusercontent.com/u/166467013?v=4" width=115><br><sub>Pammella Teixeira</sub>](https://github.com/pammtxr) | [<img src="https://avatars.githubusercontent.com/u/99264438?v=4" width=115><br><sub>Wendy Teresa Abregu Olarte</sub>](https://github.com/wendy1305) |
+| :---: | :---: | :---: | :---: | :---: |
