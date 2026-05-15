@@ -209,33 +209,13 @@ Sua submissão deve:
 
 # Estrutura Recomendada do Notebook
 
-```text
-01_imports
-02_configuracao_entrez
-03_buscas_ncbi
-04_download_registros
-05_parsing_genbank
-06_analise_comparativa
-07_conclusoes
-```
 
----
-
-# Critérios de Avaliação
-
-| Critério                          | Peso |
-| --------------------------------- | ---- |
-| Funcionamento do código           | 35%  |
-| Uso correto do Bio.Entrez         | 25%  |
-| Parsing e interpretação biológica | 20%  |
-| Organização e clareza             | 10%  |
-| Documentação e comentários        | 10%  |
 
 ---
 
 # Recursos Úteis
 
-* Documentação do Biopython
-* NCBI Entrez
-* NCBI GenBank
-* Tutorial oficial do Biopython
+* [Documentação oficial do Biopython](https://biopython.org/)
+* [NCBI GenBank](https://www.ncbi.nlm.nih.gov/)
+* [NCBI Entrez](https://www.ncbi.nlm.nih.gov/Web/Search/entrezfs.html)
+* [Tutorial oficial do Biopython](https://biopython.org/docs/latest/Tutorial/index.html)

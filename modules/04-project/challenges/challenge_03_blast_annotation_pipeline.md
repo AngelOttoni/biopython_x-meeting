@@ -208,34 +208,13 @@ Sua submissão deve:
 
 # Estrutura Recomendada do Notebook
 
-```text
-01_imports
-02_carregamento_dados
-03_analise_exploratoria
-04_execucao_blast
-05_parsing_resultados
-06_tabela_resumo
-07_interpretacao_biologica
-08_conclusoes
-```
 
----
-
-# Critérios de Avaliação
-
-| Critério                             | Peso |
-| ------------------------------------ | ---- |
-| Funcionamento do código              | 35%  |
-| Uso correto do Bio.Blast             | 25%  |
-| Parsing e organização dos resultados | 20%  |
-| Interpretação biológica              | 10%  |
-| Documentação e clareza               | 10%  |
 
 ---
 
 # Recursos Úteis
 
-* Documentação do Biopython
-* NCBI BLAST
-* BLAST+
-* Tutorial oficial do Biopython
+* [Documentação oficial do Biopython](https://biopython.org/)
+* [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+* [BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html)
+* [Tutorial oficial do Biopython](https://biopython.org/docs/latest/Tutorial/index.html)
