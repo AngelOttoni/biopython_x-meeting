@@ -2,9 +2,9 @@
 
 ## Contexto
 
-Uma sequência nucleotídica de origem desconhecida foi obtida durante um experimento de sequenciamento. Sua tarefa será utilizar ferramentas do Biopython para investigar possíveis características biológicas dessa sequência.
+Uma sequência nucleotídica de origem desconhecida foi obtida durante um experimento de sequenciamento ambiental. Sua tarefa será utilizar ferramentas do Biopython para investigar possíveis características biológicas dessa sequência.
 
-Ao longo deste desafio, você deverá manipular sequências biológicas, realizar buscas em bancos de dados públicos e interpretar os resultados obtidos.
+Ao longo deste desafio, você deverá manipular sequências biológicas, realizar buscas por similaridade e explorar bancos de dados públicos para interpretar os resultados obtidos.
 
 O objetivo principal não é apenas executar comandos, mas desenvolver um pequeno fluxo investigativo semelhante ao utilizado em análises reais de bioinformática.
 
@@ -17,9 +17,10 @@ Ao concluir este desafio, espera-se que você seja capaz de:
 * Manipular sequências utilizando o objeto `Seq`.
 * Trabalhar com objetos `SeqRecord`.
 * Ler e escrever arquivos FASTA.
+* Investigar sequências utilizando BLAST.
+* Interpretar resultados de alinhamento e similaridade.
 * Realizar buscas no NCBI utilizando `Bio.Entrez`.
-* Interpretar informações obtidas em registros biológicos.
-* Utilizar BLAST para investigar similaridade entre sequências.
+* Explorar registros biológicos no formato GenBank.
 * Organizar resultados de maneira clara e reprodutível.
 
 ---
@@ -28,7 +29,7 @@ Ao concluir este desafio, espera-se que você seja capaz de:
 
 O desafio utiliza o seguinte arquivo:
 
-[`unknown_sequence_01.fsa`](./data/unknown_sequence_01.fsa)
+[`unknown_sequence_01.fsa`](./data/env_sample_A23_partial_sequence.fsa)
 
 ---
 
@@ -36,12 +37,12 @@ O desafio utiliza o seguinte arquivo:
 
 ## Tarefa 1
 
-Carregue a sequência presente no arquivo FASTA utilizando `Bio.SeqIO`.
+Carregue a sequência presente no arquivo FASTA utilizando `Bio.SeqIO`. Observe como as informações do cabeçalho FASTA são armazenadas no objeto `SeqRecord`.
 
 Exiba:
 
-* ID da sequência
-* descrição
+* identificador da sequência (id)
+* descrição do registro
 * comprimento da sequência
 * os primeiros 50 nucleotídeos
 
@@ -65,29 +66,74 @@ Calcule:
 * porcentagem de GC
 * quantidade total de nucleotídeos A, T, C e G
 
-Apresente os resultados em formato de tabela ou dicionário.
+*Apresente os resultados em formato de tabela ou dicionário.*
+
+Além dos cálculos, interprete brevemente o que essas características podem indicar sobre a sequência analisada.
 
 ---
 
-# Parte 2 — Investigando a Sequência no NCBI
+# Parte 2 — Investigando Similaridade com BLAST
 
 ## Tarefa 4
 
-Utilize `Bio.Entrez` para buscar registros relacionados à sequência investigada.
+Utilize BLAST para investigar possíveis homologias da sequência.
 
-Você deverá:
+Você poderá utilizar:
 
-* configurar corretamente o e-mail no Entrez
-* escolher uma estratégia de busca apropriada
-* justificar brevemente sua escolha
+* BLAST online (`NCBIWWW.qblast`) ou
+* BLAST local (`BLAST+`)
 
-Sugestão:
-
-Você pode utilizar o organismo, parte da sequência ou termos biológicos relevantes para construir sua busca.
+Escolha a abordagem que considerar mais adequada.
 
 ---
 
 ## Tarefa 5
+
+
+Analise os resultados obtidos no BLAST.
+
+Identifique:
+
+* melhor hit encontrado
+* organismo associado
+* porcentagem de identidade
+* cobertura do alinhamento
+* E-value
+* possível função biológica associada
+
+Além disso:
+
+* verifique se múltiplos hits apontam para grupos biológicos semelhantes
+* interprete o nível de confiança da identificação obtida
+
+---
+
+# Parte 3 — Investigação Refinada no NCBI
+
+## Tarefa 6
+
+Com base nas hipóteses levantadas a partir do BLAST, utilize `Bio.Entrez` para buscar registros relacionados à sequência investigada.
+
+Você deverá:
+
+* configurar corretamente o e-mail no Entrez
+* construir uma estratégia de busca coerente com os resultados do BLAST
+* justificar brevemente sua escolha
+
+Exemplo:
+
+Os resultados do BLAST podem sugerir:
+
+* um organismo específico
+* um grupo taxonômico
+* um gene conservado
+* uma região ribossomal
+
+Utilize essas informações para construir sua busca.
+
+---
+
+## Tarefa 7
 
 Selecione um registro relevante retornado pela busca e:
 
@@ -103,36 +149,10 @@ Exemplos de informações:
 * referências
 * features presentes
 
----
-
-# Parte 3 — Busca por Similaridade
-
-## Tarefa 6
-
-Utilize BLAST para investigar possíveis homologias da sequência.
-
-Você poderá utilizar:
-
-* BLAST online (`NCBIWWW.qblast`) ou
-* BLAST local (`BLAST+`)
-
-Escolha a abordagem que considerar mais adequada.
+Interprete brevemente as informações encontradas.
 
 ---
-
-## Tarefa 7
-
-Analise os resultados obtidos no BLAST.
-
-Identifique:
-
-* melhor hit encontrado
-* organismo associado
-* porcentagem de identidade
-* E-value
-* possível função biológica associada
-
----
+# Parte 4 — Conclusão da Investigação
 
 ## Tarefa 8
 
@@ -142,10 +162,11 @@ Com base nos resultados obtidos ao longo do desafio, escreva uma breve conclusã
 * A sequência parece corresponder a um gene conhecido?
 * Os resultados encontrados foram suficientes para uma identificação confiável?
 * Quais limitações existem nessa análise?
+* Quais análises adicionais poderiam aumentar a confiança da identificação?
 
 ---
 
-# Desafio Extra (Opcional)
+# Desafio Extra (*Opcional*)
 
 Automatize parte da análise criando funções reutilizáveis.
 
@@ -171,34 +192,22 @@ Sua submissão deve:
 # Estrutura Recomendada do Notebook
 
 ```text
-01 - Configurações
-02 - Carregamento dos Dados
-03 - Análise da Sequência de Interesse
-04 - Buscas no NCBI
-05 - Blast
-06 - Conclusões
+1. Importação das Bibliotecas
+2. Leitura da(s) Sequência(s)
+3. Análise Inicial da Sequência
+4. Busca por Similaridade (BLAST)
+5. Investigação no NCBI
+6. Conclusões
 ```
-
----
-
-# Critérios de Avaliação
-
-| Critério                   | Peso |
-| -------------------------- | ---- |
-| Funcionamento do código    | 40%  |
-| Uso correto do Biopython   | 25%  |
-| Organização e clareza      | 15%  |
-| Interpretação biológica    | 10%  |
-| Documentação e comentários | 10%  |
 
 ---
 
 # Recursos Úteis
 
-* Documentação do Biopython
-* NCBI GenBank
-* NCBI BLAST
-* Tutorial oficial do Biopython
+* [Documentação oficial do Biopython](https://biopython.org/)
+* [NCBI GenBank](https://www.ncbi.nlm.nih.gov/)
+* [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+* [Tutorial oficial do Biopython](https://biopython.org/docs/latest/Tutorial/index.html)
 
 ---
 
